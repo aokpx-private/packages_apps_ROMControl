@@ -916,4 +916,19 @@
         <item>11</item>
     </string-array>
 
+    <!-- VibeControl -->
+    <string-array name="vibecontrol_entries">
+        <item>@string/vibecontrol_one</item>
+        <item>@string/vibecontrol_two</item>
+        <item>@string/vibecontrol_three</item>
+        <item>@string/vibecontrol_default</item>
+    </string-array>
+
+    <string-array name="vibecontrol_values" translatable="false">
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+    </string-array>
+
 </resources>
