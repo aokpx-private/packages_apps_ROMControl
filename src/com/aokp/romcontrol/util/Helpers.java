@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -197,6 +198,23 @@ public class Helpers {
             }
         }
         return true;
+    }
+
+    public static boolean createInitd(String name, String command) {
+        String path = "/system/etc/init.d";
+        String initName = null;
+        File newfile = new File(path + File.separator + initName);
+        try {
+            path = new File(path).mkdirs();
+            initName = new File(name);
+            newfile.createNewFile();
+            
+        } catch (IOException e) {
+            String Error = "Error creating " + name;
+            Log.e(TAG, Error, e);
+            return null;
+        } 
+        return newfile;
     }
 
     public static String[] getAvailableIOSchedulers() {
